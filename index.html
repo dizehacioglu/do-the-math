@@ -10,46 +10,108 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<img src="./logo.png">
+			<div class="col-sm-4 title-header">
+				<img src="./logo.png"><br>
+				do the math!
+			</div>
+			<div class="col-sm-4">
+				Use this spreadsheet to do the math and determine if financing our boot camp is worth it. 
+				While there's payoffs that can't be quantified - such as career growth and job satisfaction - 
+				knowing that you'll be able to pay off your loan and earn more money is crucial!
+			</div>
 		</div>
-		<div class="row">
-			<h5>Use this spreadsheet to do the math and determine if financing our boot camp is worth it. 
-			<br>While there's payoffs that can't be quantified - such as career growth and job satisfaction - but knowing that you'll be able to pay off your loan and earn more money is crucial!
-			<br>Just follow the 4 simple steps below and you'll have your answer. We've entered an example--read the notes! </h5>
-		</div>
-		<div class="row">
-			<form>
-				Step 1: Enter your Current Income:<br>
-				<input type="text" class="income" name="current-income">
-				<p>Step 2: Enter your Federal and State taxes:<br>
-				<input type="text" name="current-taxes">
+		<form>
+			<div class="row">
+				<div class="col-sm-4">
+					<!-- <label class="control-label">Your Current Income:<br></label> -->
+					<input type="text" class="form-control" name="current-income" placeholder="Your Current Income">
+				</div>
+				<div class="col-sm-8" id="income-explanation">
+					<!-- Explains the income -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<!-- <label class="control-label">Step 2: Enter your Federal and State taxes:<br></label> -->
+					<input type="text" class="form-control" name="current-taxes" placeholder="Your Federal and State Taxes">
+				</div>
+				<div class="col-sm-8" id="taxes-explanation">
+					<!-- Explains taxes -->
+				</div>
+			</div>
 
-				<p><p>Step 3: Enter New Income after New Coding Job:<br>
-				<input type="text" name="new-income">
-				<p>Step 4: Enter your new Federal and State taxes<br>
-				<input type="text" name="new-taxes">
-			</form>
-		</div>
+			<div class="row">
+				<table class="table">
+					<tr>
+						<th>Annual</th>
+						<th>Monthly</th>
+					</tr>
+					<tr>
+						<td id="current-income"></td>
+						<td id="monthly-current-income"></td>
+					</tr>
+					<tr>
+						<td id="current-taxes"></td>
+						<td id="monthly-current-taxes"></td>
+					</tr>
+				</table>
+			</div>
 
-		<div class="row" id="c-i">
+
+
+			<div class="row">
+				<div class="col-sm-4">
+					<!-- <label class="control-label">Step 3: Enter New Income after New Coding Job:<br></label> -->
+					<input type="text" class="form-control" name="new-income" placeholder="Income after New Coding Job">
+				</div>
+				<div class="col-sm-8" id="new-income-explanation">
+					<!-- Explains new income -->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<!-- <label class="control-label">Step 4: Enter your new Federal and State taxes<br></label> -->
+					<input type="text" class="form-control" name="new-taxes" placeholder="New Federal and State taxes">
+				</div>
+				<div class="col-sm-8" id="new-taxes-explanation">
+					<!-- Explains taxes -->
+				</div>
+			</div>
+			<div class="row">
+				<table class="table">
+					<tr>
+						<th>Annual</th>
+						<th>Monthly</th>
+					</tr>
+					<tr>
+						<td id="new-income"></td>
+						<td id="monthly-new-income"></td>
+					</tr>
+					<tr>
+						<td id="new-taxes"></td>
+						<td id="monthly-new-taxes"></td>
+					</tr>
+				</table>
+			</div>
+		</form>
+
+<!-- 		<div class="row" id="c-i">
 			
-		</div>
+		</div> -->
 
-		<div id="income-explanation">
+		<!-- <div class="row">
+
 			
-		</div>
 
-		<div class="row">
+
 			<h1>Think how your life can change with the extra money!</h1>
-		</div>
 
-		<div class="row">
 			Notes:
 			<ul>
 				<li>Consult your tax advisor.
 				<li>Our typical placement rate is 96% within 90 days of graduation
 			</ul>
-		</div>
+		</div> -->
 	</div>
 	
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
